@@ -1,0 +1,22 @@
+name: Billboard
+version: '${project.version}'
+main: cc.mousse.billboard.Billboard
+api-version: 1.19
+authors: [ PhineasZ ]
+description: 登录后展示告示信息
+commands:
+  billboard:
+    usage: /<command>
+    description: 公告牌
+    reload:
+      description: 重载配置
+      usage:
+        /billboard reload
+    enable:
+      description: 启用消息
+      usage:
+        /billboard enable
+    disable:
+      description: 禁用消息
+      usage:
+        /billboard disable

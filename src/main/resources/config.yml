@@ -1,0 +1,8 @@
+billboard:
+  # 是否启用消息
+  enable: true
+  # 消息前缀
+  prefix: "$RESET$[$GOLD$旧时光$RESET$]"
+  # 消息列表
+  messages:
+    -
