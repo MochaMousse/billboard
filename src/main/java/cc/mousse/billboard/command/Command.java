@@ -1,6 +1,7 @@
 package cc.mousse.billboard.command;
 
 import cc.mousse.billboard.config.ConfigLoader;
+import lombok.val;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -45,7 +46,15 @@ public class Command implements CommandExecutor {
 
   private void reload(CommandSender sender) {
     ConfigLoader.load();
-    sender.sendMessage(ConfigLoader.getPrefix() + ChatColor.BLUE + "消息已重载");
+    sender.sendMessage(ConfigLoader.getPrefix() + ChatColor.BLUE + "消息已重载↓");
+    val messages = ConfigLoader.getMessage();
+    if (!messages.isEmpty()) {
+      for (String message : messages) {
+        if (!message.isBlank()) {
+          sender.sendMessage(ConfigLoader.getPrefix() + message);
+        }
+      }
+    }
   }
 
   private void enable(CommandSender sender) {
