@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cc.mousse</groupId>
-    <artifactId>application</artifactId>
+    <artifactId>billboard</artifactId>
     <version>1.2</version>
     <packaging>jar</packaging>
 
