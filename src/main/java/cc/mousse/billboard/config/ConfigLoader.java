@@ -1,6 +1,6 @@
 package cc.mousse.billboard.config;
 
-import cc.mousse.billboard.Billboard;
+import cc.mousse.billboard.Application;
 import lombok.val;
 import org.bukkit.ChatColor;
 
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public final class ConfigLoader {
 
-  private static final Billboard INSTANCE = Billboard.getInstance();
+  private static final Application INSTANCE = Application.getInstance();
   private static List<String> messageList;
   private static boolean enable = false;
   private static String prefix;

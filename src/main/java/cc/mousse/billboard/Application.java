@@ -13,9 +13,9 @@ import java.util.Objects;
 /**
  * @author PhineasZ
  */
-public final class Billboard extends JavaPlugin {
+public final class Application extends JavaPlugin {
 
-  private static Billboard instance;
+  private static Application instance;
 
   @Override
   public void onEnable() {
@@ -41,11 +41,11 @@ public final class Billboard extends JavaPlugin {
     this.getLogger().info("插件已卸载");
   }
 
-  public static Billboard getInstance() {
+  public static Application getInstance() {
     return instance;
   }
 
-  private static void setInstance(Billboard billboard) {
-    instance = billboard;
+  private static void setInstance(Application application) {
+    instance = application;
   }
 }
