@@ -1,6 +1,7 @@
 package cc.mousse.billboard.config;
 
 import cc.mousse.billboard.Application;
+import lombok.Getter;
 import lombok.val;
 import org.bukkit.ChatColor;
 
@@ -8,14 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author PhineasZ
+ * @author MochaMousse
  */
 public final class ConfigLoader {
-
   private static final Application INSTANCE = Application.getInstance();
   private static List<String> messageList;
-  private static boolean enable = false;
-  private static String prefix;
+  @Getter private static boolean enable = false;
+  @Getter private static String prefix;
 
   private ConfigLoader() {}
 
@@ -72,14 +72,6 @@ public final class ConfigLoader {
 
   public static List<String> getMessage() {
     return messageList;
-  }
-
-  public static String getPrefix() {
-    return prefix;
-  }
-
-  public static boolean isEnable() {
-    return enable;
   }
 
   public static void enable() {

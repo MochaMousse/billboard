@@ -4,6 +4,7 @@ import cc.mousse.billboard.command.Command;
 import cc.mousse.billboard.command.TabCommand;
 import cc.mousse.billboard.config.ConfigLoader;
 import cc.mousse.billboard.event.JoinEvent;
+import lombok.Getter;
 import lombok.val;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,16 +12,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
 
 /**
- * @author PhineasZ
+ * @author MochaMousse
  */
 public final class Application extends JavaPlugin {
-
-  private static Application instance;
+  @Getter private static Application instance;
 
   @Override
   public void onEnable() {
     // Plugin startup logic
-    setInstance(this);
     // 注册插件
     getServer().getPluginManager().registerEvents(new JoinEvent(), this);
     // 注册命令
@@ -39,13 +38,5 @@ public final class Application extends JavaPlugin {
     // 卸载插件
     Bukkit.getScheduler().cancelTasks(this);
     this.getLogger().info("插件已卸载");
-  }
-
-  public static Application getInstance() {
-    return instance;
-  }
-
-  private static void setInstance(Application application) {
-    instance = application;
   }
 }

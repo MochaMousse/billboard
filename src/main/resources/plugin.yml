@@ -1,8 +1,8 @@
 name: Billboard
 version: '${project.version}'
 main: cc.mousse.billboard.Application
-api-version: 1.20
-author: PhineasZ
+api-version: 1.21
+author: MochaMousse
 description: 登录后展示告示信息
 commands:
   billboard:

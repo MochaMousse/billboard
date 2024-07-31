@@ -7,10 +7,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 /**
- * @author PhineasZ
+ * @author MochaMousse
  */
 public class JoinEvent implements Listener {
-
   @EventHandler
   public void onJoin(PlayerJoinEvent event) {
     if (ConfigLoader.isEnable()) {

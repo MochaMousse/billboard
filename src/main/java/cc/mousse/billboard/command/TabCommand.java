@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author PhineasZ
+ * @author MochaMousse
  */
 public class TabCommand implements TabCompleter {
   @Nullable

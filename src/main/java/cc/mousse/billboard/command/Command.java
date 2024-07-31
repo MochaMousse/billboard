@@ -8,10 +8,9 @@ import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * @author PhineasZ
+ * @author MochaMousse
  */
 public class Command implements CommandExecutor {
-
   @Override
   public boolean onCommand(
       CommandSender sender,
