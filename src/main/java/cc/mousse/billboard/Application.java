@@ -4,21 +4,21 @@ import cc.mousse.billboard.command.Command;
 import cc.mousse.billboard.command.TabCommand;
 import cc.mousse.billboard.config.ConfigLoader;
 import cc.mousse.billboard.event.JoinEvent;
+import java.util.Objects;
 import lombok.Getter;
 import lombok.val;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Objects;
-
 /**
  * @author MochaMousse
  */
 public final class Application extends JavaPlugin {
-  @Getter private static Application instance;
+  @Getter static private Application instance;
 
   @Override
   public void onEnable() {
+    instance = this;
     // Plugin startup logic
     // 注册插件
     getServer().getPluginManager().registerEvents(new JoinEvent(), this);
